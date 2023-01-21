@@ -21,7 +21,7 @@ function EditUser() {
 
    const [info,setinfo]=useState(initialstate)
    async function populate(){
-      const req=await fetch('http://localhost:1337/api/profile',{
+      const req=await fetch('http://localhost:1337/api/user/profile',{
           headers:{
              'x-access-token':localStorage.getItem('token')
           }
@@ -60,7 +60,7 @@ function EditUser() {
     {
        e.preventDefault()
 
-      const response = await fetch('http://localhost:1337/api/edituser',{
+      const response = await fetch('http://localhost:1337/api/user/edituser',{
          method:'POST',
          headers:{
           'Content-Type':'application/json',

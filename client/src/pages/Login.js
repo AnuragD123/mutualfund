@@ -3,9 +3,9 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { decodeToken } from "react-jwt";
-import Alert from 'react-bootstrap/Alert';
+//import Alert from 'react-bootstrap/Alert';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'bootstrap';
+//import { Button } from 'bootstrap';
 
 function Login() {
      
@@ -18,7 +18,7 @@ function Login() {
     {   
        e.preventDefault()
 
-      const response = await fetch('http://localhost:1337/api/login',{
+      const response = await fetch('http://localhost:1337/api/user/login',{
          method:'POST',
          headers:{
           'Content-Type':'application/json',

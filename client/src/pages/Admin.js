@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Alert from 'react-bootstrap/Alert';
+//import Alert from 'react-bootstrap/Alert';
 import Table from 'react-bootstrap/Table';
 
 function Admin() {
@@ -9,7 +9,7 @@ function Admin() {
 
      async function approve(id){
        
-        const response = await fetch('http://localhost:1337/api/adminupdatedata',{
+        const response = await fetch('http://localhost:1337/api/admin/adminupdatedata',{
          method:'POST',
          headers:{
           'Content-Type':'application/json',
@@ -29,7 +29,7 @@ function Admin() {
 
     async function getdata(){
         
-        let req=await fetch('http://localhost:1337/api/admingetdata',{
+        let req=await fetch('http://localhost:1337/api/admin/admingetdata',{
            headers:{
                'x-access-token':localStorage.getItem('token')
             }
