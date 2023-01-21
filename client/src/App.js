@@ -2,6 +2,7 @@ import React from 'react'
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import Admin from './pages/Admin'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './pages/Navbar';
 import Login from './pages/Login'
 import Profile from './pages/Profile'
 import Register from './pages/Register'
@@ -14,10 +15,12 @@ const App=()=>{
        
         <div>
         <BrowserRouter>
+        <Navbar/>
         <Routes>
-        <Route path='/' element={<Login />} />
-        <Route path='register' element={<Register/>} />
-        <Route path='profile' element={<Profile/>} />
+
+        <Route path='/' element={ <Login/>} />
+        <Route path='/register' element={<Register/>} />
+        <Route path='/profile' element={<Profile/>} />
         <Route path='admin'  element={<Admin/>}  />
         <Route path='edit' element={<EditUser/>} />
         <Route path='forgot' element={<Forgot/>}  />
