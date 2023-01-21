@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import Profile from './pages/Profile'
 import Register from './pages/Register'
 import EditUser from './pages/EditUser';
+import Forgot from './pages/Forgot';
 
 
 const App=()=>{
@@ -19,6 +20,7 @@ const App=()=>{
         <Route path='profile' element={<Profile/>} />
         <Route path='admin'  element={<Admin/>}  />
         <Route path='edit' element={<EditUser/>} />
+        <Route path='forgot' element={<Forgot/>}  />
         </Routes>
         </BrowserRouter>
         </div>

@@ -8,7 +8,7 @@ const Profile=()=>{
     const navigate=useNavigate();
       const [info,setinfo]=useState({})
       async function populate(){
-         const req=await fetch('http://localhost:1337/api/profile',{
+         const req=await fetch('http://localhost:1337/api/user/profile',{
              headers:{
                 'x-access-token':localStorage.getItem('token')
              }
