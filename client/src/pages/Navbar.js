@@ -7,7 +7,7 @@ function Navbar() {
             
 
             {/* Navbar */}
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                 {/* Container wrapper */}
                 <div className="container-fluid">
                     {/* Toggle button */}

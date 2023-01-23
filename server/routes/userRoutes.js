@@ -5,7 +5,7 @@ const bcrypt=require('bcryptjs')
 const jwt=require('jsonwebtoken')
 const mailerfun=require('../utilities/mail')
 
-
+const fs = require('fs')
 
 
 
@@ -128,6 +128,14 @@ router.post('/forgotpswd',async(req,res)=>{
     }
 })
 
+router.get('/fetchdata',(req,res)=>{
+
+    fs.readFile('./data/moneycontrol.json',"utf-8",(err,data)=>{
+        res.send(data)
+    })
+    
+
+})
 
 
 module.exports=router;
