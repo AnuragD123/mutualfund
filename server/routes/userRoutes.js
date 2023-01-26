@@ -131,7 +131,7 @@ router.post('/forgotpswd',async(req,res)=>{
 router.get('/fetchdata',(req,res)=>{
 
     fs.readFile('./data/moneycontrol.json',"utf-8",(err,data)=>{
-        res.send(data)
+        return res.send(data)
     })
     
 

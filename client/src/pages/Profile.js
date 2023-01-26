@@ -17,7 +17,10 @@ const Profile = () => {
     })
     const dataRes = await response.json()
     // console.log(dataRes)
-    setdata(dataRes)
+       setdata([...dataRes.Company_Name])
+       //console.log(dataRes.Company_Name);
+       console.log(data);
+
     // console.log(data.data)
     // if (data.status === 'ok') {
     //   //console.log(data)
