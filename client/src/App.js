@@ -8,6 +8,8 @@ import Profile from './pages/Profile'
 import Register from './pages/Register'
 import EditUser from './pages/EditUser';
 import Forgot from './pages/Forgot';
+import Signin from './pages/Signin ';
+import Signup from './pages/Signup';
 
 
 const App=()=>{
@@ -19,8 +21,10 @@ const App=()=>{
         <Routes>
 
         <Route path='/' element={ <Login/>} />
-        <Route path='/login' element={ <Login/>} />
-        <Route path='/register' element={<Register/>} />
+        <Route path='/signin' element={<Signin/>} />
+        <Route path='/signup' element={<Signup/>} />
+        {/* <Route path='/login' element={ <Login/>} />
+        <Route path='/register' element={<Register/>} /> */}
         <Route path='/profile' element={<Profile/>} />
         <Route path='admin'  element={<Admin/>}  />
         <Route path='edit' element={<EditUser/>} />
