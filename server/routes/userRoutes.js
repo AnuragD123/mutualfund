@@ -17,7 +17,7 @@ router.post('/register',async(req,res)=>{
         name:req.body.name,
         email:req.body.email,
         password:newpassword,
-        domain:req.body.domain,
+        mobileno:req.body.mobileno,
 
     });
     res.json({status:'ok'})
