@@ -1,7 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
-function Navbar() {
+function Navbar() { 
+
+   
+       function handlelogout()
+       {
+        localStorage.removeItem("token");
+       
+       }
+   
+
+
     return (
         <div>
             
@@ -50,7 +60,7 @@ function Navbar() {
                                     <Link className="dropdown-item" to="#">Settings</Link>
                                 </li>
                                 <li>
-                                    <Link className="dropdown-item" to="#">Logout</Link>
+                                    <Link className="dropdown-item" onClick={handlelogout} to='/signin'>Logout</Link>
                                 </li>
                             </ul>
                         </div>
