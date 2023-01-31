@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import Alert from 'react-bootstrap/Alert';
 import Table from 'react-bootstrap/Table';
-
+import { decodeToken } from "react-jwt";
+import { useNavigate } from 'react-router-dom';
 function Admin() {
-
+      const navigate=useNavigate()
     const [info, setinfo] = useState([])
 
     async function approve(id) {
@@ -54,7 +55,18 @@ function Admin() {
     }
 
     useEffect(() => {
-        getdata();
+
+        const token = localStorage.getItem('token');
+    const user = decodeToken(token)
+    if (!user) {
+      localStorage.removeItem('token')
+      navigate('/')
+    }
+    else {
+      //console.log(user.isadmin)
+      getdata();
+    }
+       
 
     }, [])
     console.log(info)
