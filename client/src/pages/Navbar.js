@@ -5,7 +5,6 @@ function Navbar() {
     return (
         <div>
             
-
             {/* Navbar */}
             <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                 {/* Container wrapper */}
