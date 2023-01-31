@@ -5,6 +5,7 @@ import { decodeToken } from "react-jwt";
 // import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const Profile = () => {
+  
   const navigate = useNavigate();
   const [data, setdata] = useState([])
 
@@ -55,10 +56,10 @@ const Profile = () => {
   return (
 
     <div className="container mt-5 pt-5">
-      <table>
-        <thead>
+      <table className="table table-striped table-bordered table-responsive">
+        <thead className="table-dark">
           <tr>
-            <th>S.No</th>
+            {/* <th>S.No</th> */}
             <th>Name</th>
             <th>Percentage Gain</th>
             <th>Change</th>
@@ -74,14 +75,14 @@ const Profile = () => {
               
                return(
                 <tr>
-                  <td>{}</td>
+                  {/* <td>{}</td> */}
                   <td>{d.name}</td>
                   <td>{d.Percentage_Gain}</td>
                   <td>{d.Change}</td>
                   <td>{d.Prev_Close}</td>
                   <td>{d.Last_Price}</td>
                   <td>{d.Low}</td>
-                  <td>{d.high}</td>
+                  <td>{d.High}</td>
                 </tr>
                )
             })}

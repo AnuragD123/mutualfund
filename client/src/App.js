@@ -3,9 +3,9 @@ import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import Admin from './pages/Admin'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './pages/Navbar';
-import Login from './pages/Login'
+import Footer from './pages/Footer';
 import Profile from './pages/Profile'
-import Register from './pages/Register'
+
 import EditUser from './pages/EditUser';
 import Forgot from './pages/Forgot';
 import Signin from './pages/Signin ';
@@ -20,7 +20,7 @@ const App=()=>{
         <Navbar/>
         <Routes>
 
-        <Route path='/' element={ <Login/>} />
+        <Route path='/' element={ <Signin/>} />
         <Route path='/signin' element={<Signin/>} />
         <Route path='/signup' element={<Signup/>} />
         {/* <Route path='/login' element={ <Login/>} />
@@ -29,7 +29,9 @@ const App=()=>{
         <Route path='admin'  element={<Admin/>}  />
         <Route path='edit' element={<EditUser/>} />
         <Route path='forgot' element={<Forgot/>}  />
+
         </Routes>
+        <Footer/>
         </BrowserRouter>
         </div>
         

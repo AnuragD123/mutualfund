@@ -68,7 +68,6 @@ export default function SignInSide() {
   
       const user = decodeToken(data.user)
   
-  
       localStorage.setItem("token", data.user)
       if (user.isadmin) {
         alert("Successfull login as admin boss")
