@@ -42,7 +42,7 @@ const Profile = () => {
     const user = decodeToken(token)
     if (!user) {
       localStorage.removeItem('token')
-      navigate('/login')
+      navigate('/')
     }
     else {
       //console.log(user.isadmin)
