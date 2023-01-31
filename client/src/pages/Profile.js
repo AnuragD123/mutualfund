@@ -5,6 +5,7 @@ import { decodeToken } from "react-jwt";
 // import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const Profile = () => {
+  
   const navigate = useNavigate();
   const [data, setdata] = useState([])
 
