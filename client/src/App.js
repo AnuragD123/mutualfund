@@ -7,9 +7,10 @@ import Footer from './pages/Footer';
 import Profile from './pages/Profile'
 
 import EditUser from './pages/EditUser';
-import Forgot from './pages/Forgot';
+import Forgot from './pages/Forgot/Forgot';
 import Signin from './pages/Signin ';
 import Signup from './pages/Signup';
+import Changepassword from './pages/Changepassword/Changepassword';
 
 
 const App=()=>{
@@ -26,9 +27,12 @@ const App=()=>{
         {/* <Route path='/login' element={ <Login/>} />
         <Route path='/register' element={<Register/>} /> */}
         <Route path='/profile' element={<Profile/>} />
-        <Route path='admin'  element={<Admin/>}  />
-        <Route path='edit' element={<EditUser/>} />
-        <Route path='forgot' element={<Forgot/>}  />
+        <Route path='/admin'  element={<Admin/>}  />
+        <Route path='/edit' element={<EditUser/>} />
+        <Route path='/forgot' element={<Forgot/>}  />
+        <Route path='/changepassword' element={<Changepassword/>}  />
+        <Route path='/*' element={<div>Page Not Found</div>}  />
+        
 
         </Routes>
         <Footer/>

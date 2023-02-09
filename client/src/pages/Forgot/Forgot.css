@@ -1,0 +1,8 @@
+.form-control{
+    border: 1px solid #bdbdbd !important;
+    border-top-right-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+}
+.form-container{
+    height: 300px;
+}

@@ -16,7 +16,7 @@ function Navbar() {
         <div>
             
             {/* Navbar */}
-            <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                 {/* Container wrapper */}
                 <div className="container-fluid">
                     {/* Toggle button */}
@@ -27,7 +27,7 @@ function Navbar() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         {/* Navbar brand */}
                         <Link className="navbar-brand mt-2 mt-lg-0" to="#">
-                            <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height={15} alt="MDB Logo" loading="lazy" />
+                            MutualFund
                         </Link>
                         {/* Left links */}
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">

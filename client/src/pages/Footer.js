@@ -8,7 +8,7 @@ function Footer() {
                 {/* Copyright */}
                 <div className="text-center p-3" >
                     © {new Date().getFullYear()} Copyright:
-                    <Link className="text-light" to="#">Praedico Global</Link>
+                    <Link className="text-light" to="/">Praedico Global</Link>
                 </div>
                 {/* Copyright */}
             </footer>
