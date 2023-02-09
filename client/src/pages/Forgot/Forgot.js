@@ -25,8 +25,12 @@ const Forgot = () => {
 
     const dat = await response.json()
     let status = dat.status;
+    let message = dat.message;
     if (status === "success") {
       Navigate('/changepassword');
+    }
+    else{
+      alert(message)
     }
 
 

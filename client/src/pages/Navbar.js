@@ -31,12 +31,22 @@ function Navbar() {
                         </Link>
                         {/* Left links */}
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/">Login</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/register">Register</Link>
-                            </li>
+                            {
+
+                                localStorage.getItem('token')?''
+                                :
+                                <>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/">Login</Link>
+                                </li>
+                                 <li className="nav-item">
+                                    <Link className="nav-link" to="/register">Register</Link>
+                                </li>
+                                
+                                </>
+                            }
+                            
+                           
                             <li className="nav-item">
                                 <Link className="nav-link" to="#">Projects</Link>
                             </li>

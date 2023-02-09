@@ -110,18 +110,10 @@ router.post('/forgotpswd', async (req, res) => {
     }
 
     if (user) {
-        const mailid = `${req.body.email}`;
-        function generateOTP() {
+        const mailid = req.body.email;
 
-
-            var digits = '0123456789';
-            let OTP = '';
-            for (let i = 0; i < 4; i++) {
-                OTP += digits[Math.floor(Math.random() * 10)];
-            }
-            return OTP;
-        }
-        const genratedOTP = generateOTP();
+        const genratedOTP = Math.floor(100000 + Math.random() * 900000)
+        
 
         const text = `Your OTP is ${genratedOTP}`;
         mailerfun(mailid, 'OTP', text);
@@ -139,7 +131,7 @@ router.post('/forgotpswd', async (req, res) => {
                 /* update the otp and expiry time */
                 let update = {
                     otp: genratedOTP,
-                    exipiresOn: new Date().getTime() + 20 * 1000,
+                    exipiresOn: new Date().getTime() + 5*60 * 1000,
                 }
                 let doc = await Otp.findOneAndUpdate({ email: req.body.email }, update, {
                     returnOriginal: false
@@ -151,7 +143,7 @@ router.post('/forgotpswd', async (req, res) => {
 
                     email: req.body.email,
                     otp: genratedOTP,
-                    exipiresOn: new Date().getTime() + 20 * 1000, /* expires in 5 min */
+                    exipiresOn: new Date().getTime() + 5*60 * 1000, /* expires in 5 min */
 
                 })
             }
