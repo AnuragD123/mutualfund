@@ -1,20 +1,21 @@
 import React from 'react'
-import { Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-function Navbar() { 
+function Navbar() {
 
-   
-       function handlelogout()
-       {
+
+    function handlelogout() {
         localStorage.removeItem("token");
-       
-       }
-   
+
+    }
+
+
+
 
 
     return (
         <div>
-            
+
             {/* Navbar */}
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                 {/* Container wrapper */}
@@ -31,25 +32,42 @@ function Navbar() {
                         </Link>
                         {/* Left links */}
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/">Home</Link>
+
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/stocks">Stocks</Link>
+
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/aboutus">About Us</Link>
+
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/contactus">Contact Us</Link>
+                                
+                            </li>
                             {
 
-                                localStorage.getItem('token')?''
-                                :
-                                <>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/signin">Login</Link>
-                                </li>
-                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/signup">Register</Link>
-                                </li>
-                                
-                                </>
+                                localStorage.getItem('token') ? ''
+                                    :
+                                    <>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/signin">Login</Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link className="nav-link" to="/signup">Register</Link>
+                                        </li>
+
+                                    </>
                             }
-                            
-                           
-                            <li className="nav-item">
-                                <Link className="nav-link" to="#">Projects</Link>
-                            </li>
+
+
+
                         </ul>
                         {/* Left links */}
                     </div>
@@ -80,7 +98,7 @@ function Navbar() {
                 {/* Container wrapper */}
             </nav>
             {/* Navbar */}
-        
+
         </div>
     )
 }

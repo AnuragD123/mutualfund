@@ -7,11 +7,14 @@ import Home from './pages/User/Home/Home'
 import Homeadmin from './pages/Admin/Home'
 import Signin from './pages/Signin '
 import Signup from './pages/Signup'
-import Profile from './pages/User/Profile'
+import Stocks from './pages/User/Stocks'
 import EditUser from './pages/User/EditUser'
 import Forgot from './pages/User/Forgot/Forgot'
 import Changepassword from './pages/User/Changepassword/Changepassword'
 import Feedback from './pages/Admin/Feedback/Feedback'
+
+import About from  './pages/User/AboutUs/About'
+import Contact from  './pages/User/ContactUs/Contact'
 
 
 
@@ -24,14 +27,18 @@ const App = () => {
                 <Navbar/>
                 <Routes>
 
+                    {/* User Routes */}
                     <Route exact path='/' element={<Home />} />
 
                     
+                    <Route path='/aboutus' element={<About />} />
+                    <Route path='/contactus' element={<Contact />} />
+                  
 
                     <Route path='/signin' element={<Signin />} />
                     <Route path='/signup' element={<Signup />} />
 
-                    <Route path='/profile' element={<Profile />} />
+                    <Route path='/stocks' element={<Stocks />} />
                     <Route path='/edit' element={<EditUser />} />
                     <Route path='/forgot' element={<Forgot />} />
                     <Route path='/changepassword' element={<Changepassword />} />

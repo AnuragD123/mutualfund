@@ -4,7 +4,7 @@ import { decodeToken } from "react-jwt";
 // import Button from 'react-bootstrap/Button';
 // import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
-const Profile = () => {
+const Stocks = () => {
   
   const navigate = useNavigate();
   const [data, setdata] = useState([])
@@ -96,5 +96,5 @@ const Profile = () => {
   
 }
 
-export default Profile;
+export default Stocks;
 

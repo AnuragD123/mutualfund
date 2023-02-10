@@ -77,7 +77,7 @@ export default function SignInSide() {
   
       else {
         alert("Successfull login as normal user")
-        navigate('/profile')
+        navigate('/stocks')
       }
     }
     else {
