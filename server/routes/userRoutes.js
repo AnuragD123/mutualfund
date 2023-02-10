@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/usermodel")
 const Otp = require("../models/otpmodel")
+const Feedback = require("../models/feedbackmodel")
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const mailerfun = require('../utilities/mail')
@@ -23,7 +24,7 @@ router.post('/register', async (req, res) => {
         });
         res.json({ status: 'ok' })
     } catch (error) {
-        res.json({ status: 'error h bhai' })
+        res.json({ status: 'error' })
     }
 
 })
@@ -253,6 +254,43 @@ router.get('/fetchdata', (req, res) => {
 
 
 })
+router.post('/submitfeedback', async (req, res) => {
+
+    try {
+
+        const feedback = await Feedback.create({
+
+
+            email:req.body.email,
+            name:req.body.name,
+            rating:req.body.rating,
+            message:req.body.message,
+
+        });
+        res.json({ status: 'ok' })
+    } catch (error) {
+        res.json({ status: 'error' })
+    }
+
+
+
+})
+
+router.get('/fetchfeedbackdata', async (req, res) => {
+
+    try {
+
+       const feedbacks=await Feedback.find();
+        
+        res.json({ status: 'success', data:feedbacks })
+    } catch (error) {
+        res.json({ status: 'error' })
+    }
+
+
+
+})
+
 
 
 module.exports = router;
