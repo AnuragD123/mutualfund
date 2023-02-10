@@ -5,9 +5,7 @@ import Feedback from '../../../Components/User/Feedback/Feedback'
 
 function Home() {
   return (
-    <div>
-
-      home
+    <div mt-0>
 
       <Slider/>
       <FAQ/>
