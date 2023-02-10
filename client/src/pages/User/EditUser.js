@@ -5,11 +5,6 @@ import { decodeToken } from "react-jwt";
 function EditUser() {
      const navigate=useNavigate()
 
-    
-//    const [name,setname]=useState('')
-//    const [email,setEmail]=useState('')
-//    const [password,setpassword]=useState('')
-//    const [domain,setdomain]=useState('')
    const initialstate={
     _id:'',
     name:'',

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Table from 'react-bootstrap/Table';
 import { decodeToken } from "react-jwt";
 import { useNavigate } from 'react-router-dom';
-function Admin() {
+function Home() {
       const navigate=useNavigate()
     const [info, setinfo] = useState([])
 
@@ -108,6 +108,6 @@ function Admin() {
     )
 }
 
-export default Admin
+export default Home
 
 

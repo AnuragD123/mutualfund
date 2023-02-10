@@ -26,7 +26,7 @@ function Navbar() {
                     {/* Collapsible wrapper */}
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         {/* Navbar brand */}
-                        <Link className="navbar-brand mt-2 mt-lg-0" to="#">
+                        <Link className="navbar-brand mt-2 mt-lg-0" to="/">
                             MutualFund
                         </Link>
                         {/* Left links */}
@@ -37,10 +37,10 @@ function Navbar() {
                                 :
                                 <>
                                 <li className="nav-item">
-                                    <Link className="nav-link" to="/">Login</Link>
+                                    <Link className="nav-link" to="/signin">Login</Link>
                                 </li>
                                  <li className="nav-item">
-                                    <Link className="nav-link" to="/register">Register</Link>
+                                    <Link className="nav-link" to="/signup">Register</Link>
                                 </li>
                                 
                                 </>
