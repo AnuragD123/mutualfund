@@ -42,7 +42,7 @@ const App = () => {
                     <Route path='/edit' element={<EditUser />} />
                     <Route path='/forgot' element={<Forgot />} />
                     <Route path='/changepassword' element={<Changepassword />} />
-
+                    <Route path='/Feedback' element={<Feedback />} />
 
 
                     {/* Admin Routes */}

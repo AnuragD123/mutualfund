@@ -51,6 +51,10 @@ function Navbar() {
                                 <Link className="nav-link" to="/contactus">Contact Us</Link>
                                 
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/Feedback">Feedback</Link>
+                                
+                            </li>
                             {
 
                                 localStorage.getItem('token') ? ''
