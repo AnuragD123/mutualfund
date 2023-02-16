@@ -199,25 +199,22 @@ const space = {
 
 const styles = {
   container: {
-    //margin: "40px 0",
-    //marginRight: "40px 0"
     left: "20px",
-    alignItems: "centre",
     display: "flex",
     flexDirection: "column",
-    //alignItems: "center",
+    alignItems: "center"
   },
   textarea: {
-    alignItems: "center",
     border: "1px solid #a9a9a9",
     borderRadius: 5,
     width: 300,
     margin: "20px 0",
     minHeight: 100,
     padding: 10,
+    alignItems: "center"
   },
   button: {
-    alignItems: "center",
+    
     border: "1px solid #a9a9a9",
     borderRadius: 5,
     width: 300,
