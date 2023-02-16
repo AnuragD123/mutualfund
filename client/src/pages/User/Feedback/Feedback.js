@@ -6,6 +6,7 @@ const colors = {
   grey: "#a9a9a9"
 }
 
+
 function Feedback() {
 
   const stars = Array(5).fill(0);
@@ -14,7 +15,9 @@ function Feedback() {
 
   const handleClick = value => {
     setCurrentValue(value)
+   
   };
+
 
   const handleMouseOver = value => {
     setHoverValue(value)
@@ -23,6 +26,13 @@ function Feedback() {
   const handleMouseLeave = value => {
     setHoverValue(undefined)
   }
+
+  
+  function submitHandler(){
+    console.log(currentValue);
+  }
+
+
   return (
     
     <div style = {styles.container}>
@@ -48,7 +58,7 @@ function Feedback() {
         placeholder="What's your feedback"
         style={styles.textarea}
       />
-      <button style={styles.button}>Submit</button>
+      <button style={styles.button} onClick={submitHandler} >Submit</button>
     </div>
   );
 };

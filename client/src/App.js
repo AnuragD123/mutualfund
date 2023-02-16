@@ -11,9 +11,10 @@ import Stocks from './pages/User/Stocks'
 import EditUser from './pages/User/EditUser'
 import Forgot from './pages/User/Forgot/Forgot'
 import Changepassword from './pages/User/Changepassword/Changepassword'
-import Feedback from './pages/Admin/Feedback/Feedback'
+import FeedbackA from './pages/Admin/Feedback/Feedback'
 
 import About from  './pages/User/AboutUs/About'
+import Feedback from  './pages/User/Feedback/Feedback'
 import Contact from  './pages/User/ContactUs/Contact'
 
 
@@ -48,7 +49,7 @@ const App = () => {
                     {/* Admin Routes */}
 
                     <Route exact path='/admin/' element={<Homeadmin />} />
-                    <Route exact path='/admin/feedback' element={<Feedback />} />
+                    <Route exact path='/admin/feedback' element={<FeedbackA />} />
 
 
                     <Route exact path='/*' element={<div>Page Not Found- App</div>}  />
