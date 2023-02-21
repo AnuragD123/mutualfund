@@ -287,6 +287,70 @@ router.get('/fetchfeedbackdata', async (req, res) => {
         res.json({ status: 'error' })
     }
 
+})
+router.get('/fetchfeedbackdatauser', async (req, res) => {
+
+    try {
+
+       const feedbacks=await Feedback.find({approved:"true"});
+        
+        res.json({ status: 'success', data:feedbacks })
+    } catch (error) {
+        res.json({ status: 'error' })
+    }
+
+})
+router.post('/approvefeedback', async (req, res) => {
+
+    let id = req.body.id;
+  
+    let filter = {
+        _id:id
+    } 
+    let update = {
+        approved:"true"
+    }
+    try{
+        let doc = await Feedback.findOneAndUpdate(filter, update,{new:true});
+
+        if (doc) {
+            res.json({success:true})
+        }
+        else{
+            res.json({success:false})
+        }
+    }
+    catch(err){
+        console.log(err);
+    }
+
+
+
+})
+router.post('/disapprovefeedback', async (req, res) => {
+
+    let id = req.body.id;
+  
+    let filter = {
+        _id:id
+    } 
+    let update = {
+        approved:"false"
+    }
+    try{
+        let doc = await Feedback.findOneAndUpdate(filter, update,{new:true});
+
+        if (doc) {
+            res.json({success:true})
+        }
+        else{
+            res.json({success:false})
+        }
+    }
+    catch(err){
+        console.log(err);
+    }
+
 
 
 })

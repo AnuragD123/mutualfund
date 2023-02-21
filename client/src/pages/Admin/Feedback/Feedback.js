@@ -1,230 +1,107 @@
-/*import React from "react";
-import {FaStar} from "react-icons/fa";
+import React, { useEffect, useState } from 'react'
 
-const colors = {
-  orange: "#FFBA5A",
-  grey: "#a9a9a9"
-}
+// import { useNavigate } from 'react-router-dom';
 
 function Feedback() {
 
-  const stars = Array(5).fill(0);
-  const [currentValue, setCurrentValue] = React.useState(0);
-  const [hoverValue, setHoverValue] = React.useState(undefined);
+  const [data, setData] = useState([]);
 
-  const handleClick = value => {
-    setCurrentValue(value)
-  };
-
-  const handleMouseOver = value => {
-    setHoverValue(value)
+  // const navigate = useNavigate()
+  const fetchData = async () => {
+    const responceFetch = await fetch('http://localhost:1337/api/user/fetchfeedbackdata');
+    const resJSON = await responceFetch.json();
+    console.log(resJSON);
+    setData(resJSON.data)
   }
 
-  const handleMouseLeave = value => {
-    setHoverValue(undefined)
-  }
-  return (
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const disapprove = async (e) => {
+
+    let id = e.target.value;
+    let response = await fetch('http://localhost:1337/api/user/disapprovefeedback', {
+      method: 'POST',
+      body: JSON.stringify({id}),
+      headers: { 
+        'Content-type': 'application/json'
+      }
+    });
+    let jsonRes = await response.json();
+
+    if(jsonRes.success){
+      fetchData();
+      // alert("Permission Status Changed!!")
+      
+    }
     
-    <div style = {styles.container}>
-      <h2>Rate Us</h2>
-      <div style={styles.stars}>
-        {stars.map((_, index) => {
-          return (
-            <FaStar key = {index} size = {24} style = {
-              {
-                marginRight: 10,
-                cursor: "pointer",
-              }
-            }
-            color={(hoverValue || currentValue)> index ? colors.orange : colors.grey}
-            onClick={() => handleClick(index + 1)}
-            onMouseOver={()=>handleMouseOver(index + 1)}
-            onMouseLeave={handleMouseLeave}
-            />
-          )
-        })}
-      </div>
-      <textarea
-        placeholder="What's your feedback"
-        style={styles.textarea}
-      />
-      <button style={styles.button}>Submit</button>
-    </div>
-  );
-};
-
-const styles = {
-  container: {
-    margin: "40px 0",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-  textarea: {
-    border: "1px solid #a9a9a9",
-    borderRadius: 5,
-    width: 300,
-    margin: "20px 0",
-    minHeight: 100,
-    padding: 10,
-  },
-  button: {
-    border: "1px solid #a9a9a9",
-    borderRadius: 5,
-    width: 300,
-    padding: 10,
+  
   }
-}
+  const approve = async(e) => {
+    let id = e.target.value;
+    let response = await fetch('http://localhost:1337/api/user/approvefeedback', {
+      method: 'POST',
+      body: JSON.stringify({id}),
+      headers: { 
+        'Content-type': 'application/json'
+      }
+    })
+    let jsonRes = await response.json();
 
-export default Feedback;*/
-/*
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">...</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-*/
-import React, { useState } from "react";
-import {FaStar} from "react-icons/fa";
-const colors = {
-  orange: "#FFBA5A",
-  grey: "#a9a9a9"
-}
-const FeedbackModal = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleOpenModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-  const stars = Array(5).fill(0);
-  const [currentValue, setCurrentValue] = React.useState(0);
-  const [hoverValue, setHoverValue] = React.useState(undefined);
-  const handleClick = value => {
-    setCurrentValue(value)
-  };
-
-  const handleMouseOver = value => {
-    setHoverValue(value)
+    if(jsonRes.success){
+      fetchData();
+      // alert("Permission Status Changed!!")
+      
+    }
   }
 
-  const handleMouseLeave = value => {
-    setHoverValue(undefined)
-  }
   return (
-    <div>
-      
-      <button onClick={handleOpenModal} style={header}>Feedback</button>
-      
-      {isModalOpen && (
-        <div style={modalStyles}>
-          <div style={modalHeaderStyles}>
+    <div className='container my-5 table-responsive-sm'>
+
+      <table className="table table-striped table-responsive">
+        <thead className='table-dark'>
+          <tr>
+
+            <th >Name</th>
+            <th >Email</th>
+            <th >Rating</th>
+            <th >Message</th>
+            <th >Status</th>
+            <th >Action</th>
             
-            <div style = {styles.container}>
-            <h3 style={space}>Leave a Feedback</h3>
-            <div style={styles.stars}>
-              {stars.map((_, index) => {
-                return (
-              <FaStar key = {index} size = {24} style = {
-              {
-                marginRight: 10,
-                cursor: "pointer",
-              }
-            }
-            color={(hoverValue || currentValue)> index ? colors.orange : colors.grey}
-            onClick={() => handleClick(index + 1)}
-            onMouseOver={()=>handleMouseOver(index + 1)}
-            onMouseLeave={handleMouseLeave}
-            />
-          )
-        })}
-      </div>
+            
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((d) => {
+            return (
+              <tr key={d._id}>
+                <td>{d.name}</td>
+                <td>{d.email}</td>
+                <td>{d.rating}</td>
+                <td>{d.message}</td>
+                <td>{d.approved==="true"?"Approved":"Not Approved"}</td>
+                <td>
+                  {d.approved==="false"?<button value={d._id} onClick={approve} className='btn btn-primary'>Approve</button>:""}
+                  {d.approved==="true"?<button value={d._id} onClick={disapprove} className='btn btn-danger'>Disapprove</button>:""}
+                  
+                  </td>
+              </tr>
+            )
+          })}
+
+
+        </tbody>
+      </table>
+
+      <ul>
+
+
+      </ul>
+
     </div>
-            <button onClick={handleCloseModal}>x</button>
-          </div>
-          <form>
-          <textarea
-        placeholder="Write your feedback..."
-        style={styles.textarea}
-      />
-            <button style={styles.button}>Submit</button>
-          </form>
-        </div>
-      )}
-    </div>
-  );
-};
-
-const modalStyles = {
-  position: "fixed",
-  top: "40%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  backgroundColor: "white",
-  padding: "10px",
-  boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)"
-};
-
-const modalHeaderStyles = {
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  marginBottom: "20px"
-};
-const space = {
-  //left: "20px",
-  top: "50%",
-  margin: "80px 0",
-  width: 300,
-};
-
-const styles = {
-  container: {
-    left: "20px",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center"
-  },
-  textarea: {
-    border: "1px solid #a9a9a9",
-    borderRadius: 5,
-    width: 300,
-    margin: "20px 0",
-    minHeight: 100,
-    padding: 10,
-    alignItems: "center"
-  },
-  button: {
-    
-    border: "1px solid #a9a9a9",
-    borderRadius: 5,
-    width: 300,
-    padding: 10,
-  }
-}
-const header = {
-  //top: "50%",
-  margin: "40px 0",
-  //width: 300,
+  )
 }
 
-export default FeedbackModal;
+export default Feedback;
