@@ -1,754 +1,323 @@
 {
-    "Name": [
-     {
-      "name": "UPL"
-     },
-     {
-      "name": "P I Industries"
-     },
-     {
-      "name": "Sumitomo Chemi."
-     },
-     {
-      "name": "Bayer Crop Sci."
-     },
-     {
-      "name": "Sharda Cropchem"
-     },
-     {
-      "name": "Rallis India"
-     },
-     {
-      "name": "Bharat Rasayan"
-     },
-     {
-      "name": "Dhanuka Agritech"
-     },
-     {
-      "name": "Astec Lifescienc"
-     },
-     {
-      "name": "Best Agrolife"
-     },
-     {
-      "name": "Meghmani Organi."
-     },
-     {
-      "name": "India Pesticides"
-     },
-     {
-      "name": "Paushak"
-     },
-     {
-      "name": "NACL Industries"
-     },
-     {
-      "name": "Insecticid.India"
-     },
-     {
-      "name": "Heranba Inds"
-     },
-     {
-      "name": "Bhagiradha Chem."
-     },
-     {
-      "name": "Shivalik Rasayan"
-     },
-     {
-      "name": "Dharmaj Crop"
-     },
-     {
-      "name": "Kilpest India"
-     },
-     {
-      "name": "Sikko Industries"
-     },
-     {
-      "name": "Aimco Pesticides"
-     },
-     {
-      "name": "Aristo Bio-Tech"
-     },
-     {
-      "name": "Bhaskar Agrochem"
-     },
-     {
-      "name": "Super Crop Safe"
-     }
-    ],
-    "CMP_Rs": [
-     {
-      "name": "747.15"
-     },
-     {
-      "name": "3269.05"
-     },
-     {
-      "name": "459.35"
-     },
-     {
-      "name": "4437.20"
-     },
-     {
-      "name": "481.60"
-     },
-     {
-      "name": "206.60"
-     },
-     {
-      "name": "8932.45"
-     },
-     {
-      "name": "677.10"
-     },
-     {
-      "name": "1439.90"
-     },
-     {
-      "name": "1109.85"
-     },
-     {
-      "name": "97.65"
-     },
-     {
-      "name": "215.10"
-     },
-     {
-      "name": "7745.15"
-     },
-     {
-      "name": "92.80"
-     },
-     {
-      "name": "585.50"
-     },
-     {
-      "name": "338.60"
-     },
-     {
-      "name": "1092.80"
-     },
-     {
-      "name": "662.30"
-     },
-     {
-      "name": "158.20"
-     },
-     {
-      "name": "453.65"
-     },
-     {
-      "name": "87.40"
-     },
-     {
-      "name": "124.00"
-     },
-     {
-      "name": "65.50"
-     },
-     {
-      "name": "68.00"
-     },
-     {
-      "name": "5.87"
-     }
-    ],
-    "P_E_Ratio": [
-     {
-      "name": "12.92"
-     },
-     {
-      "name": "43.00"
-     },
-     {
-      "name": "45.39"
-     },
-     {
-      "name": "29.42"
-     },
-     {
-      "name": "13.57"
-     },
-     {
-      "name": "27.40"
-     },
-     {
-      "name": "22.38"
-     },
-     {
-      "name": "13.85"
-     },
-     {
-      "name": "38.37"
-     },
-     {
-      "name": "10.97"
-     },
-     {
-      "name": "8.69"
-     },
-     {
-      "name": "17.04"
-     },
-     {
-      "name": "46.27"
-     },
-     {
-      "name": "22.50"
-     },
-     {
-      "name": "15.14"
-     },
-     {
-      "name": "9.78"
-     },
-     {
-      "name": "23.86"
-     },
-     {
-      "name": "41.45"
-     },
-     {
-      "name": "18.69"
-     },
-     {
-      "name": "15.27"
-     },
-     {
-      "name": "57.13"
-     },
-     {
-      "name": "22.85"
-     },
-     {
-      "name": "30.75"
-     }
-    ],
-    "Mar_Cap_Rs_Cr": [
-     {
-      "name": "56118.67"
-     },
-     {
-      "name": "49595.18"
-     },
-     {
-      "name": "22952.38"
-     },
-     {
-      "name": "19962.67"
-     },
-     {
-      "name": "4342.26"
-     },
-     {
-      "name": "4012.85"
-     },
-     {
-      "name": "3717.08"
-     },
-     {
-      "name": "3082.01"
-     },
-     {
-      "name": "2823.70"
-     },
-     {
-      "name": "2619.53"
-     },
-     {
-      "name": "2482.11"
-     },
-     {
-      "name": "2472.58"
-     },
-     {
-      "name": "2387.14"
-     },
-     {
-      "name": "1839.11"
-     },
-     {
-      "name": "1732.36"
-     },
-     {
-      "name": "1352.58"
-     },
-     {
-      "name": "1133.43"
-     },
-     {
-      "name": "960.84"
-     },
-     {
-      "name": "534.68"
-     },
-     {
-      "name": "340.60"
-     },
-     {
-      "name": "146.83"
-     },
-     {
-      "name": "118.82"
-     },
-     {
-      "name": "44.59"
-     },
-     {
-      "name": "35.43"
-     },
-     {
-      "name": "23.61"
-     }
-    ],
-    "Div_Yld_percentage": [
-     {
-      "name": "1.34"
-     },
-     {
-      "name": "0.18"
-     },
-     {
-      "name": "0.22"
-     },
-     {
-      "name": "2.25"
-     },
-     {
-      "name": "1.25"
-     },
-     {
-      "name": "1.45"
-     },
-     {
-      "name": "0.02"
-     },
-     {
-      "name": "2.07"
-     },
-     {
-      "name": "0.10"
-     },
-     {
-      "name": "0.18"
-     },
-     {
-      "name": "1.43"
-     },
-     {
-      "name": "0.35"
-     },
-     {
-      "name": "0.15"
-     },
-     {
-      "name": "0.59"
-     },
-     {
-      "name": "0.51"
-     },
-     {
-      "name": "0.59"
-     },
-     {
-      "name": "0.27"
-     },
-     {
-      "name": "0.08"
-     },
-     {
-      "name": "0.00"
-     },
-     {
-      "name": "0.55"
-     },
-     {
-      "name": "0.17"
-     },
-     {
-      "name": "1.61"
-     },
-     {
-      "name": "0.00"
-     },
-     {
-      "name": "0.00"
-     },
-     {
-      "name": "0.00"
-     }
-    ],
-    "NP_Qtr_Rs_Cr": [
-     {
-      "name": "1360.00"
-     },
-     {
-      "name": "351.80"
-     },
-     {
-      "name": "90.61"
-     },
-     {
-      "name": "134.50"
-     },
-     {
-      "name": "108.40"
-     },
-     {
-      "name": "22.55"
-     },
-     {
-      "name": "36.57"
-     },
-     {
-      "name": "46.07"
-     },
-     {
-      "name": "0.85"
-     },
-     {
-      "name": "30.62"
-     },
-     {
-      "name": "8.35"
-     },
-     {
-      "name": "35.03"
-     },
-     {
-      "name": "15.02"
-     },
-     {
-      "name": "16.53"
-     },
-     {
-      "name": "9.33"
-     },
-     {
-      "name": "14.39"
-     },
-     {
-      "name": "12.09"
-     },
-     {
-      "name": "6.65"
-     },
-     {
-      "name": "5.50"
-     },
-     {
-      "name": "7.72"
-     },
-     {
-      "name": "1.21"
-     },
-     {
-      "name": "-1.82"
-     },
-     {
-      "name": "1.41"
-     },
-     {
-      "name": "0.27"
-     }
-    ],
-    "Qtr_Profit_Var_percentage": [
-     {
-      "name": "13.21"
-     },
-     {
-      "name": "58.04"
-     },
-     {
-      "name": "-7.33"
-     },
-     {
-      "name": "42.26"
-     },
-     {
-      "name": "6.06"
-     },
-     {
-      "name": "-42.98"
-     },
-     {
-      "name": "-21.76"
-     },
-     {
-      "name": "8.35"
-     },
-     {
-      "name": "-96.61"
-     },
-     {
-      "name": "97.80"
-     },
-     {
-      "name": "-87.79"
-     },
-     {
-      "name": "-19.27"
-     },
-     {
-      "name": "91.23"
-     },
-     {
-      "name": "14.71"
-     },
-     {
-      "name": "14.48"
-     },
-     {
-      "name": "-73.10"
-     },
-     {
-      "name": "34.93"
-     },
-     {
-      "name": "-23.55"
-     },
-     {
-      "name": "-33.66"
-     },
-     {
-      "name": "17.04"
-     },
-     {
-      "name": "57.14"
-     },
-     {
-      "name": "-142.42"
-     },
-     {
-      "name": "6.02"
-     },
-     {
-      "name": "119.01"
-     }
-    ],
-    "Sales_Qtr_Rs_Cr": [
-     {
-      "name": "13679.00"
-     },
-     {
-      "name": "1613.20"
-     },
-     {
-      "name": "753.65"
-     },
-     {
-      "name": "1037.90"
-     },
-     {
-      "name": "1017.30"
-     },
-     {
-      "name": "630.39"
-     },
-     {
-      "name": "309.29"
-     },
-     {
-      "name": "393.37"
-     },
-     {
-      "name": "117.18"
-     },
-     {
-      "name": "327.75"
-     },
-     {
-      "name": "549.43"
-     },
-     {
-      "name": "217.64"
-     },
-     {
-      "name": "55.76"
-     },
-     {
-      "name": "482.15"
-     },
-     {
-      "name": "356.53"
-     },
-     {
-      "name": "280.21"
-     },
-     {
-      "name": "126.00"
-     },
-     {
-      "name": "57.36"
-     },
-     {
-      "name": "101.07"
-     },
-     {
-      "name": "14.73"
-     },
-     {
-      "name": "10.12"
-     },
-     {
-      "name": "30.79"
-     },
-     {
-      "name": "16.90"
-     },
-     {
-      "name": "4.60"
-     }
-    ],
-    "Qtr_Sales_Var_Percentage": [
-     {
-      "name": "21.09"
-     },
-     {
-      "name": "18.94"
-     },
-     {
-      "name": "6.58"
-     },
-     {
-      "name": "4.83"
-     },
-     {
-      "name": "15.63"
-     },
-     {
-      "name": "0.37"
-     },
-     {
-      "name": "-7.80"
-     },
-     {
-      "name": "10.23"
-     },
-     {
-      "name": "-32.40"
-     },
-     {
-      "name": "40.97"
-     },
-     {
-      "name": "-14.19"
-     },
-     {
-      "name": "14.53"
-     },
-     {
-      "name": "64.00"
-     },
-     {
-      "name": "20.61"
-     },
-     {
-      "name": "13.62"
-     },
-     {
-      "name": "-29.13"
-     },
-     {
-      "name": "25.86"
-     },
-     {
-      "name": "-3.65"
-     },
-     {
-      "name": "-5.65"
-     },
-     {
-      "name": "2.58"
-     },
-     {
-      "name": "-18.12"
-     },
-     {
-      "name": "-69.46"
-     },
-     {
-      "name": "-10.15"
-     },
-     {
-      "name": "-24.96"
-     }
-    ],
-    "ROCE_Percentage": [
-     {
-      "name": "15.58"
-     },
-     {
-      "name": "17.33"
-     },
-     {
-      "name": "33.69"
-     },
-     {
-      "name": "30.91"
-     },
-     {
-      "name": "26.15"
-     },
-     {
-      "name": "13.56"
-     },
-     {
-      "name": "28.42"
-     },
-     {
-      "name": "30.03"
-     },
-     {
-      "name": "22.21"
-     },
-     {
-      "name": "40.73"
-     },
-     {
-      "name": "24.06"
-     },
-     {
-      "name": "40.54"
-     },
-     {
-      "name": "16.91"
-     },
-     {
-      "name": "15.45"
-     },
-     {
-      "name": "16.18"
-     },
-     {
-      "name": "38.46"
-     },
-     {
-      "name": "24.77"
-     },
-     {
-      "name": "15.28"
-     },
-     {
-      "name": "40.00"
-     },
-     {
-      "name": "29.93"
-     },
-     {
-      "name": "12.89"
-     },
-     {
-      "name": "31.24"
-     },
-     {
-      "name": "11.53"
-     },
-     {
-      "name": "16.52"
-     },
-     {
-      "name": "-11.59"
-     }
+    "Name":[
+    {
+    "name":"UPL",
+    "url":"https://www.screener.in/company/UPL/consolidated/",
+    "CMP_Rs":"739.25",
+    "P_E_Ratio":"12.83",
+    "Mar_Cap_Rs_Cr":"55488.64",
+    "Div_Yld_Percentage":"1.35",
+    "NP_Qtr_Rs_Cr":"1360.00",
+    "Qtr_Profit_Var_Percentage":"13.21",
+    "Sales_Qtr_Rs_Cr":"13679.00",
+    "Qtr_Sales_Var_Percentage":"21.09",
+    "ROCE_Percentage":"15.58"
+    },
+    {
+    "name":"P I Industries",
+    "url":"https://www.screener.in/company/PIIND/consolidated/",
+    "CMP_Rs":"3216.05",
+    "P_E_Ratio":"42.32",
+    "Mar_Cap_Rs_Cr":"48793.35",
+    "Div_Yld_Percentage":"0.18",
+    "NP_Qtr_Rs_Cr":"351.80",
+    "Qtr_Profit_Var_Percentage":"58.04",
+    "Sales_Qtr_Rs_Cr":"1613.20",
+    "Qtr_Sales_Var_Percentage":"18.94",
+    "ROCE_Percentage":"17.33"
+    },
+    {
+    "name":"Sumitomo Chemi.",
+    "url":"https://www.screener.in/company/SUMICHEM/",
+    "CMP_Rs":"461.00",
+    "P_E_Ratio":"45.53",
+    "Mar_Cap_Rs_Cr":"23010.58",
+    "Div_Yld_Percentage":"0.23",
+    "NP_Qtr_Rs_Cr":"90.61",
+    "Qtr_Profit_Var_Percentage":"-7.33",
+    "Sales_Qtr_Rs_Cr":"753.65",
+    "Qtr_Sales_Var_Percentage":"6.58",
+    "ROCE_Percentage":"33.69"
+    },
+    {
+    "name":"Bayer Crop Sci.",
+    "url":"https://www.screener.in/company/BAYERCROP/",
+    "CMP_Rs":"4400.00",
+    "P_E_Ratio":"29.12",
+    "Mar_Cap_Rs_Cr":"19774.51",
+    "Div_Yld_Percentage":"2.23",
+    "NP_Qtr_Rs_Cr":"134.50",
+    "Qtr_Profit_Var_Percentage":"42.26",
+    "Sales_Qtr_Rs_Cr":"1037.90",
+    "Qtr_Sales_Var_Percentage":"4.83",
+    "ROCE_Percentage":"30.91"
+    },
+    {
+    "name":"Sharda Cropchem",
+    "url":"https://www.screener.in/company/SHARDACROP/consolidated/",
+    "CMP_Rs":"477.40",
+    "P_E_Ratio":"13.46",
+    "Mar_Cap_Rs_Cr":"4307.16",
+    "Div_Yld_Percentage":"1.27",
+    "NP_Qtr_Rs_Cr":"108.40",
+    "Qtr_Profit_Var_Percentage":"6.06",
+    "Sales_Qtr_Rs_Cr":"1017.30",
+    "Qtr_Sales_Var_Percentage":"15.63",
+    "ROCE_Percentage":"26.15"
+    },
+    {
+    "name":"Rallis India",
+    "url":"https://www.screener.in/company/RALLIS/",
+    "CMP_Rs":"201.45",
+    "P_E_Ratio":"26.74",
+    "Mar_Cap_Rs_Cr":"3917.63",
+    "Div_Yld_Percentage":"1.45",
+    "NP_Qtr_Rs_Cr":"22.55",
+    "Qtr_Profit_Var_Percentage":"-42.98",
+    "Sales_Qtr_Rs_Cr":"630.39",
+    "Qtr_Sales_Var_Percentage":"0.37",
+    "ROCE_Percentage":"13.56"
+    },
+    {
+    "name":"Bharat Rasayan",
+    "url":"https://www.screener.in/company/BHARATRAS/",
+    "CMP_Rs":"9069.95",
+    "P_E_Ratio":"22.69",
+    "Mar_Cap_Rs_Cr":"3768.82",
+    "Div_Yld_Percentage":"0.02",
+    "NP_Qtr_Rs_Cr":"36.57",
+    "Qtr_Profit_Var_Percentage":"-21.76",
+    "Sales_Qtr_Rs_Cr":"309.29",
+    "Qtr_Sales_Var_Percentage":"-7.80",
+    "ROCE_Percentage":"28.42"
+    },
+    {
+    "name":"Dhanuka Agritech",
+    "url":"https://www.screener.in/company/DHANUKA/consolidated/",
+    "CMP_Rs":"676.15",
+    "P_E_Ratio":"13.83",
+    "Mar_Cap_Rs_Cr":"3081.78",
+    "Div_Yld_Percentage":"2.06",
+    "NP_Qtr_Rs_Cr":"46.07",
+    "Qtr_Profit_Var_Percentage":"8.35",
+    "Sales_Qtr_Rs_Cr":"393.37",
+    "Qtr_Sales_Var_Percentage":"10.23",
+    "ROCE_Percentage":"30.03"
+    },
+    {
+    "name":"Astec Lifescienc",
+    "url":"https://www.screener.in/company/ASTEC/consolidated/",
+    "CMP_Rs":"1426.95",
+    "P_E_Ratio":"38.01",
+    "Mar_Cap_Rs_Cr":"2797.63",
+    "Div_Yld_Percentage":"0.10",
+    "NP_Qtr_Rs_Cr":"0.85",
+    "Qtr_Profit_Var_Percentage":"-96.61",
+    "Sales_Qtr_Rs_Cr":"117.18",
+    "Qtr_Sales_Var_Percentage":"-32.40",
+    "ROCE_Percentage":"22.21"
+    },
+    {
+    "name":"Best Agrolife",
+    "url":"https://www.screener.in/company/BESTAGRO/consolidated/",
+    "CMP_Rs":"1100.00",
+    "P_E_Ratio":"10.88",
+    "Mar_Cap_Rs_Cr":"2600.91",
+    "Div_Yld_Percentage":"0.18",
+    "NP_Qtr_Rs_Cr":"30.62",
+    "Qtr_Profit_Var_Percentage":"97.80",
+    "Sales_Qtr_Rs_Cr":"327.75",
+    "Qtr_Sales_Var_Percentage":"40.97",
+    "ROCE_Percentage":"40.73"
+    },
+    {
+    "name":"Meghmani Organi.",
+    "url":"https://www.screener.in/company/MOL/consolidated/",
+    "CMP_Rs":"95.65",
+    "P_E_Ratio":"8.51",
+    "Mar_Cap_Rs_Cr":"2432.56",
+    "Div_Yld_Percentage":"1.47",
+    "NP_Qtr_Rs_Cr":"8.35",
+    "Qtr_Profit_Var_Percentage":"-87.79",
+    "Sales_Qtr_Rs_Cr":"549.43",
+    "Qtr_Sales_Var_Percentage":"-14.19",
+    "ROCE_Percentage":"24.06"
+    },
+    {
+    "name":"India Pesticides",
+    "url":"https://www.screener.in/company/IPL/",
+    "CMP_Rs":"209.30",
+    "P_E_Ratio":"16.63",
+    "Mar_Cap_Rs_Cr":"2410.39",
+    "Div_Yld_Percentage":"0.35",
+    "NP_Qtr_Rs_Cr":"35.03",
+    "Qtr_Profit_Var_Percentage":"-19.27",
+    "Sales_Qtr_Rs_Cr":"217.64",
+    "Qtr_Sales_Var_Percentage":"14.53",
+    "ROCE_Percentage":"40.54"
+    },
+    {
+    "name":"Paushak",
+    "url":"https://www.screener.in/company/532742/",
+    "CMP_Rs":"7750.00",
+    "P_E_Ratio":"46.32",
+    "Mar_Cap_Rs_Cr":"2388.63",
+    "Div_Yld_Percentage":"0.15",
+    "NP_Qtr_Rs_Cr":"15.02",
+    "Qtr_Profit_Var_Percentage":"91.23",
+    "Sales_Qtr_Rs_Cr":"55.76",
+    "Qtr_Sales_Var_Percentage":"64.00",
+    "ROCE_Percentage":"16.91"
+    },
+    {
+    "name":"NACL Industries",
+    "url":"https://www.screener.in/company/NACLIND/consolidated/",
+    "CMP_Rs":"91.30",
+    "P_E_Ratio":"22.19",
+    "Mar_Cap_Rs_Cr":"1811.31",
+    "Div_Yld_Percentage":"0.60",
+    "NP_Qtr_Rs_Cr":"16.53",
+    "Qtr_Profit_Var_Percentage":"14.71",
+    "Sales_Qtr_Rs_Cr":"482.15",
+    "Qtr_Sales_Var_Percentage":"20.61",
+    "ROCE_Percentage":"15.45"
+    },
+    {
+    "name":"Insecticid.India",
+    "url":"https://www.screener.in/company/INSECTICID/",
+    "CMP_Rs":"551.85",
+    "P_E_Ratio":"14.26",
+    "Mar_Cap_Rs_Cr":"1633.36",
+    "Div_Yld_Percentage":"0.52",
+    "NP_Qtr_Rs_Cr":"9.33",
+    "Qtr_Profit_Var_Percentage":"14.48",
+    "Sales_Qtr_Rs_Cr":"356.53",
+    "Qtr_Sales_Var_Percentage":"13.62",
+    "ROCE_Percentage":"16.18"
+    },
+    {
+    "name":"Heranba Inds",
+    "url":"https://www.screener.in/company/HERANBA/",
+    "CMP_Rs":"331.45",
+    "P_E_Ratio":"9.61",
+    "Mar_Cap_Rs_Cr":"1326.26",
+    "Div_Yld_Percentage":"0.60",
+    "NP_Qtr_Rs_Cr":"14.39",
+    "Qtr_Profit_Var_Percentage":"-73.10",
+    "Sales_Qtr_Rs_Cr":"280.21",
+    "Qtr_Sales_Var_Percentage":"-29.13",
+    "ROCE_Percentage":"38.46"
+    },
+    {
+    "name":"Bhagiradha Chem.",
+    "url":"https://www.screener.in/company/BHAGCHEM/",
+    "CMP_Rs":"1062.80",
+    "P_E_Ratio":"23.29",
+    "Mar_Cap_Rs_Cr":"1105.89",
+    "Div_Yld_Percentage":"0.26",
+    "NP_Qtr_Rs_Cr":"12.09",
+    "Qtr_Profit_Var_Percentage":"34.93",
+    "Sales_Qtr_Rs_Cr":"126.00",
+    "Qtr_Sales_Var_Percentage":"25.86",
+    "ROCE_Percentage":"24.77"
+    },
+    {
+    "name":"Shivalik Rasayan",
+    "url":"https://www.screener.in/company/SHIVALIK/consolidated/",
+    "CMP_Rs":"655.00",
+    "P_E_Ratio":"40.95",
+    "Mar_Cap_Rs_Cr":"949.05",
+    "Div_Yld_Percentage":"0.08",
+    "NP_Qtr_Rs_Cr":"6.65",
+    "Qtr_Profit_Var_Percentage":"-23.55",
+    "Sales_Qtr_Rs_Cr":"57.36",
+    "Qtr_Sales_Var_Percentage":"-3.65",
+    "ROCE_Percentage":"15.28"
+    },
+    {
+    "name":"Dharmaj Crop",
+    "url":"https://www.screener.in/company/DHARMAJ/",
+    "CMP_Rs":"159.55",
+    "P_E_Ratio":"18.78",
+    "Mar_Cap_Rs_Cr":"539.30",
+    "Div_Yld_Percentage":"0.00",
+    "NP_Qtr_Rs_Cr":"5.50",
+    "Qtr_Profit_Var_Percentage":"-33.66",
+    "Sales_Qtr_Rs_Cr":"101.07",
+    "Qtr_Sales_Var_Percentage":"-5.65",
+    "ROCE_Percentage":"40.00"
+    },
+    {
+    "name":"Kilpest India",
+    "url":"https://www.screener.in/company/532067/consolidated/",
+    "CMP_Rs":"428.95",
+    "P_E_Ratio":"14.49",
+    "Mar_Cap_Rs_Cr":"322.03",
+    "Div_Yld_Percentage":"0.56",
+    "NP_Qtr_Rs_Cr":"7.72",
+    "Qtr_Profit_Var_Percentage":"17.04",
+    "Sales_Qtr_Rs_Cr":"14.73",
+    "Qtr_Sales_Var_Percentage":"2.58",
+    "ROCE_Percentage":"29.93"
+    },
+    {
+    "name":"Sikko Industries",
+    "url":"https://www.screener.in/company/SIKKO/",
+    "CMP_Rs":"86.65",
+    "P_E_Ratio":"56.65",
+    "Mar_Cap_Rs_Cr":"145.57",
+    "Div_Yld_Percentage":"0.17",
+    "NP_Qtr_Rs_Cr":"1.21",
+    "Qtr_Profit_Var_Percentage":"57.14",
+    "Sales_Qtr_Rs_Cr":"10.12",
+    "Qtr_Sales_Var_Percentage":"-18.12",
+    "ROCE_Percentage":"12.89"
+    },
+    {
+    "name":"Aimco Pesticides",
+    "url":"https://www.screener.in/company/AIMCOPEST/consolidated/",
+    "CMP_Rs":"119.60",
+    "P_E_Ratio":"22.03",
+    "Mar_Cap_Rs_Cr":"114.62",
+    "Div_Yld_Percentage":"1.66",
+    "NP_Qtr_Rs_Cr":"-1.82",
+    "Qtr_Profit_Var_Percentage":"-142.42",
+    "Sales_Qtr_Rs_Cr":"30.79",
+    "Qtr_Sales_Var_Percentage":"-69.46",
+    "ROCE_Percentage":"31.24"
+    },
+    {
+    "name":"Aristo Bio-Tech",
+    "url":"https://www.screener.in/company/ARISTO/",
+    "CMP_Rs":"65.00",
+    "P_E_Ratio":"30.51",
+    "Mar_Cap_Rs_Cr":"44.26",
+    "Div_Yld_Percentage":"0.00",
+    "ROCE_Percentage":"11.53"
+    },
+    {
+    "name":"Bhaskar Agrochem",
+    "url":"https://www.screener.in/company/524534/",
+    "CMP_Rs":"68.80",
+    "Mar_Cap_Rs_Cr":"35.84",
+    "Div_Yld_Percentage":"0.00",
+    "NP_Qtr_Rs_Cr":"1.41",
+    "Qtr_Profit_Var_Percentage":"6.02",
+    "Sales_Qtr_Rs_Cr":"16.90",
+    "Qtr_Sales_Var_Percentage":"-10.15",
+    "ROCE_Percentage":"16.52"
+    },
+    {
+    "name":"Super Crop Safe",
+    "url":"https://www.screener.in/company/530883/",
+    "CMP_Rs":"5.93",
+    "Mar_Cap_Rs_Cr":"23.86",
+    "Div_Yld_Percentage":"0.00",
+    "NP_Qtr_Rs_Cr":"0.27",
+    "Qtr_Profit_Var_Percentage":"119.01",
+    "Sales_Qtr_Rs_Cr":"4.60",
+    "Qtr_Sales_Var_Percentage":"-24.96",
+    "ROCE_Percentage":"-11.59"
+    }
     ]
-   }
+    }
