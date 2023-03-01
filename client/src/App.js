@@ -12,10 +12,10 @@ import EditUser from './pages/User/EditUser'
 import Forgot from './pages/User/Forgot/Forgot'
 import Changepassword from './pages/User/Changepassword/Changepassword'
 import FeedbackA from './pages/Admin/Feedback/Feedback'
-
 import About from  './pages/User/AboutUs/About'
 import Feedback from  './pages/User/Feedback/Feedback'
 import Contact from  './pages/User/ContactUs/Contact'
+import PeerComparison from './pages/User/PeerComparison/PeerComparison'
 
 
 
@@ -42,6 +42,7 @@ const App = () => {
                     <Route path='/stocks' element={<Stocks />} />
                     <Route path='/edit' element={<EditUser />} />
                     <Route path='/forgot' element={<Forgot />} />
+                    <Route path='/peercomparison' element={<PeerComparison />} />
                     <Route path='/changepassword' element={<Changepassword />} />
                     {/*<Route path='/Feedback' element={<Feedback />} />*/}
 

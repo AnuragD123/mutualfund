@@ -5,6 +5,7 @@ const bcrypt=require('bcryptjs')
 const jwt=require('jsonwebtoken')
 
 const Stocks = require("../models/stocks.js")
+const Sectors = require("../models/sectors.js")
 
 
 const fs = require('fs')
@@ -88,16 +89,37 @@ router.get('/stocks/insertdata', (req, res) => {
 })
 
 
+/* to fetch all the sectors */
+
+router.get('/stocks/fetchsectors', async (req, res) => {
+
+    try {
+
+        const sectorsdata= await Sectors.find()
+        res.json({status:"success", sectorsdata})
+
+        
+    } 
+    catch(error) {
+        res.json({ status: 'error',error })
+    }
+
+})
+
 /* to fetch stocks data */
 
 router.get('/stocks/fetch', async (req, res) => {
 
+    let {id} = req.query;
+    console.log("id= ",id);
+
     try {
 
-       const stocks=await Stocks.find().countDocuments()
-                                            .then((count)=>{
-                                                console.log(count)
-                                            })
+    //    const stocks=await Stocks.find().countDocuments()
+    //                                         .then((count)=>{
+    //                                             console.log(count)
+    //                                         })
+       const stocks=await Stocks.find({sector_id:id});
         
         res.json({ status: 'success', data:stocks })
     } catch (error) {

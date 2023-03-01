@@ -1,0 +1,22 @@
+.grievance-links {
+    padding: 20px 0px;
+
+}
+.grievance-links p {
+    height: 10%;
+    display: block;
+    padding: 13px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    width: 100%;
+    /* border-bottom: .1px solid rgb(142, 139, 139); */
+    /* border:2px solid black; */
+}
+
+.grievance-links p:hover {
+    /* background-color: #dc3545; */
+    background-color: #FFFF;
+    color: #343a40;
+    cursor: pointer;
+}
