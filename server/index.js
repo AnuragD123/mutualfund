@@ -27,7 +27,7 @@ app.use(express.json())
 app.get('/',(req,res)=>{
     res.send("Hello namaste dev")
 })
-
+/* ss */
 
 app.use('/api/user',require('./routes/userRoutes'))
 app.use('/api/admin',require('./routes/adminRoutes'))

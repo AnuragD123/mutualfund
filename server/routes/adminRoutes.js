@@ -4,6 +4,12 @@ const User = require("../models/usermodel")
 const bcrypt=require('bcryptjs')
 const jwt=require('jsonwebtoken')
 
+const Stocks = require("../models/stocks.js")
+
+
+const fs = require('fs')
+
+
 
 
 //approving logic is here
@@ -50,7 +56,55 @@ router.get('/admingetdata',async(req,res)=>{
   
 })
 
+/* API TO INSERT STOCKS DATA */
 
+
+
+router.get('/stocks/insertdata', (req, res) => {
+
+    fs.readFile('./data/PeerComparison/BankCompanies.json', "utf-8", (err, data) => {
+        // console.log(data);
+        let dataobj = JSON.parse(data)
+        let stocks = dataobj.stocks;
+       
+
+        try {
+            // let stid = stock+1;
+            Stocks.insertMany(stocks)
+            .then(()=>{console.log("success"); res.send('success')}).catch((err)=>{
+                console.log(err)
+                res.send(err)
+            });
+            // res.json({ status: 'ok' })
+        } catch (error) {
+            // res.json({ status: 'error' })
+
+        }
+        
+        // return res.send(data)
+    })
+
+
+})
+
+
+/* to fetch stocks data */
+
+router.get('/stocks/fetch', async (req, res) => {
+
+    try {
+
+       const stocks=await Stocks.find().countDocuments()
+                                            .then((count)=>{
+                                                console.log(count)
+                                            })
+        
+        res.json({ status: 'success', data:stocks })
+    } catch (error) {
+        res.json({ status: 'error' })
+    }
+
+})
 
 
 

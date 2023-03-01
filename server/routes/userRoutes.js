@@ -355,6 +355,37 @@ router.post('/disapprovefeedback', async (req, res) => {
 
 })
 
+/* to fetch all the sectors available */
+router.get('/sectors/', (req, res) => {
+
+    fs.readFile('./data/moneycontrol.json', "utf-8", (err, data) => {
+        return res.send(data)
+    })
+
+
+})
+
+/* to fetch data of agrochemical sector */
+
+router.get('/sectors/agrochemicals', (req, res) => {
+
+    fs.readFile('./data/moneycontrol.json', "utf-8", (err, data) => {
+        return res.send(data)
+    })
+
+
+})
+/* to fetch data of agrochemical sector */
+
+router.get('/sectors/agrochemicals', (req, res) => {
+
+    fs.readFile('./data/moneycontrol.json', "utf-8", (err, data) => {
+        return res.send(data)
+    })
+
+
+})
+
 
 
 module.exports = router;
