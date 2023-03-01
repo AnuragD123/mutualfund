@@ -56,6 +56,7 @@ function PeerComparison() {
                                         {/* <th>S.No</th> */}
                                         <th>Name</th>
                                         <th>CMP_Rs</th>
+                                        <th>P_E_Ratio</th>
                                         <th>Mar_Cap_Rs_Cr</th>
                                         <th>Div_Yld_Percentage</th>
                                         <th>NP_Qtr_Rs_Cr</th>
@@ -74,6 +75,7 @@ function PeerComparison() {
                                                 {/* <td>{}</td> */}
                                                 <td>{sd.name}</td>
                                                 <td>{sd.CMP_Rs}</td>
+                                                <td>{sd.P_E_Ratio}</td>
                                                 <td>{sd.Mar_Cap_Rs_Cr}</td>
                                                 <td>{sd.Div_Yld_Percentage}</td>
                                                 <td>{sd.NP_Qtr_Rs_Cr}</td>

@@ -12,6 +12,7 @@ const stocks=new mongoose.Schema(
         name: {type:String,required:true},
         url: {type:String} ,
         CMP_Rs: {type:String},
+        P_E_Ratio: {type:String},
         Mar_Cap_Rs_Cr: {type:String} ,
         Div_Yld_Percentage: {type:String} ,
         NP_Qtr_Rs_Cr: {type:String},
