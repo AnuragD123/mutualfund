@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './PeerComparison.css'
+
+let avgPE = 0;
+
 function PeerComparison() {
     const [sectors, setSectors] = useState([])
     const [stocksdata, setStocksData] = useState([])
+    
 
     let handleSectorClick = async (sector_id) => {
 
@@ -21,13 +25,21 @@ function PeerComparison() {
 
     }
 
+
     useEffect(() => {
 
 
         fetchSectors();
 
 
-    }, [handleSectorClick]);
+    }, [handleSectorClick], );
+
+
+    // Calculate the average of P/E values
+    if (stocksdata.length > 0) {
+        avgPE = stocksdata.reduce((acc, stock) => acc + stock.P_E_Ratio, 0) / stocksdata.length;
+    }
+
 
     return (
         /* 343a40 F5FBF9   e9ecef*/
@@ -73,23 +85,18 @@ function PeerComparison() {
                                         return (
                                             <tr>
                                                 {/* <td>{}</td> */}
-                                                <td>{sd.name}</td>
-                                                <td>{sd.CMP_Rs}</td>
-                                                <td>{sd.P_E_Ratio}</td>
-                                                <td>{sd.Mar_Cap_Rs_Cr}</td>
-                                                <td>{sd.Div_Yld_Percentage}</td>
-                                                <td>{sd.NP_Qtr_Rs_Cr}</td>
-                                                <td>{sd.Qtr_Profit_Var_Percentage}</td>
-                                                <td>{sd.Sales_Qtr_Rs_Cr}</td>
-                                                <td>{sd.Qtr_Sales_Var_Percentage}</td>
-                                                <td>{sd.ROCE_Percentage}</td>
+                                                
                                             </tr>
                                         )
                                     })}
 
 
+                                    
+
+
                                 </tbody>
                             </table>
+                            <p>Average P/E Ratio: {avgPE.toFixed(2)}</p>
                                 </div>
                            
                            
