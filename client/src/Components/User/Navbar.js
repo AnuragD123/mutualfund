@@ -12,6 +12,11 @@ function Navbar() {
       orange: "#FFBA5A",
       grey: "#a9a9a9"
     }
+
+
+    
+
+
     const handleOpenModal = (e) => {
         e.preventDefault()
       setIsModalOpen(true);
@@ -37,6 +42,34 @@ function Navbar() {
       const handleMouseLeave = value => {
         setHoverValue(undefined)
       }
+
+
+      const [feedbackText, setFeedbackText] = React.useState("");
+
+
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        const formData = new FormData();
+        formData.append("feedbackText", feedbackText);
+        formData.append("rating", currentValue);
+        fetch("/api/feedback", {
+          method: "POST",
+          body: formData,
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            setIsModalOpen(false);
+          })
+          .catch((error) => console.error(error));
+      };
+      
+
+
+
       return (
         <div>
           
@@ -68,10 +101,16 @@ function Navbar() {
         </div>
                 <button onClick={handleCloseModal}>x</button>
               </div>
-              <form>
+              <form onSubmit={handleSubmit}>
+                <div style={styles.conntainer}>
+                  <h3 style={space}>Leave a Feedback...</h3>
+                  <div style={styles.stars}></div>
+                </div>
               <textarea
             placeholder="Write your feedback..."
             style={styles.textarea}
+            value={feedbackText}
+            onChange={(event)=> setFeedbackText(event.target.value)} 
           />
                 <button style={styles.button}>Submit</button>
               </form>
