@@ -49,14 +49,14 @@ function Navbar() {
 
       const handleSubmit = (event) => {
         event.preventDefault();
-        const formData = new FormData();
-        formData.append("feedbackText", feedbackText);
-        formData.append("rating", currentValue);
-        fetch("/api/feedback", {
+      
+        fetch("http://localhost:1337/api/user/submitfeedback", {
           method: "POST",
-          body: formData,
+          body: JSON.stringify({email:"anuragdubey@gmail.com",name:"Anurag",rating:currentValue,message:feedbackText}) ,
           headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            'Content-Type': 'application/json',
+
+            "Authorization": `Bearer ${localStorage.getItem("token")}`,
           },
         })
           .then((response) => response.json())
