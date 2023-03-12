@@ -12,6 +12,11 @@ function Navbar() {
       orange: "#FFBA5A",
       grey: "#a9a9a9"
     }
+
+
+    
+
+
     const handleOpenModal = (e) => {
         e.preventDefault()
       setIsModalOpen(true);
@@ -37,6 +42,34 @@ function Navbar() {
       const handleMouseLeave = value => {
         setHoverValue(undefined)
       }
+
+
+      const [feedbackText, setFeedbackText] = React.useState("");
+
+
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        const formData = new FormData();
+        formData.append("feedbackText", feedbackText);
+        formData.append("rating", currentValue);
+        fetch("/api/feedback", {
+          method: "POST",
+          body: formData,
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            setIsModalOpen(false);
+          })
+          .catch((error) => console.error(error));
+      };
+      
+
+
+
       return (
         <div>
           
@@ -68,10 +101,16 @@ function Navbar() {
         </div>
                 <button onClick={handleCloseModal}>x</button>
               </div>
-              <form>
+              <form onSubmit={handleSubmit}>
+                <div style={styles.conntainer}>
+                  <h3 style={space}>Leave a Feedback...</h3>
+                  <div style={styles.stars}></div>
+                </div>
               <textarea
             placeholder="Write your feedback..."
             style={styles.textarea}
+            value={feedbackText}
+            onChange={(event)=> setFeedbackText(event.target.value)} 
           />
                 <button style={styles.button}>Submit</button>
               </form>
@@ -83,12 +122,13 @@ function Navbar() {
     
     const modalStyles = {
       position: "fixed",
-      zIndex:"50",
-      top: "40%",
+      zIndex: 50,
+      top: "50%",
       left: "50%",
       transform: "translate(-50%, -50%)",
       backgroundColor: "white",
-      padding: "10px",
+      padding: "20px",
+      borderRadius: "5px",
       boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.25)"
     };
     
@@ -98,42 +138,44 @@ function Navbar() {
       alignItems: "center",
       marginBottom: "20px"
     };
+    
     const space = {
-      //left: "20px",
-      top: "50%",
-      margin: "80px 0",
-      width: 300,
+      margin: "40px 0",
     };
     
     const styles = {
       container: {
-        left: "20px",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center"
+        alignItems: "center",
+        marginBottom: "20px",
+      },
+      stars: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        marginBottom: "20px",
       },
       textarea: {
         border: "1px solid #a9a9a9",
-        borderRadius: 5,
-        width: 300,
+        borderRadius: "5px",
+        width: "100%",
         margin: "20px 0",
-        minHeight: 100,
-        padding: 10,
-        alignItems: "center"
+        minHeight: "100px",
+        padding: "10px",
       },
       button: {
-        
-        border: "1px solid #a9a9a9",
-        borderRadius: 5,
-        width: 300,
-        padding: 10,
-      }
-    }
-    const header = {
-      //top: "50%",
-      margin: "40px 0",
-      //width: 300,
-    }
+        border: "none",
+        borderRadius: "5px",
+        width: "100%",
+        padding: "10px",
+        backgroundColor: "#FFBA5A",
+        color: "white",
+        fontWeight: "bold",
+        cursor: "pointer",
+      },
+    };
+    
 
     function handlelogout() {
         localStorage.removeItem("token");
