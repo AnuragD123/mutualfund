@@ -33,6 +33,7 @@ function PeerComparison() {
         /* 343a40 F5FBF9   e9ecef*/
 
         <div className='my-5 py-5'>
+            <h1 className='text-center bg-dark text-light p-3'>Peer Comparison</h1>
             <div style={{ backgroundColor: "#F5FBF9" }}>
                 <section className="container">
                     <div className="row" style={{ padding: "20px" }}>

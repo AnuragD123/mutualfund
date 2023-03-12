@@ -129,6 +129,58 @@ router.get('/stocks/fetch', async (req, res) => {
 })
 
 
+router.get('/stocks/test', async (req, res) => {
+
+ 
+    const fields = { name: 1,sector_id: 1, P_E_Ratio: 1, ROCE_Percentage: 1 };
+    
+    Stocks.find({}, fields,(err, stocks)=> {
+        if (err) {
+          console.log(err);
+          return;
+        }
+    
+        const rankingsMap = new Map();
+    
+        // Calculate combined ROC and P/E ratio rankings for each stock and store them in a Map
+        stocks.forEach(function(stock) {
+          const ranking = getRanking(stocks, 'ROCE_Percentage', 'P_E_Ratio', stock);
+          const sector = stock.sector_id;
+          if (!rankingsMap.has(sector)) {
+            rankingsMap.set(sector, []);
+          }
+          rankingsMap.get(sector).push({ stock_name: stock.name, ranking: ranking });
+        });
+    
+        // Sort stocks in each sector by combined ROC and P/E ratio ranking and output the results
+        rankingsMap.forEach(function(stocks, sector) {
+          console.log(`\n${sector} - Combined ROC and P/E ratio ranking:`);
+          stocks.sort(function(a, b) {
+            return a.ranking - b.ranking;
+          });
+          stocks.forEach(function(stock, index) {
+            console.log(`${index+1}. ${stock.stock_name} (Combined ROC and P/E ratio ranking: ${stock.ranking})`);
+          });
+        });
+    
+        
+      });
+    
+    function getRanking(stocks, rocField, peField, currentStock) {
+      const rocValues = stocks.map(stock => stock[rocField]);
+      const peValues = stocks.map(stock => stock[peField]);
+      const rocMax = Math.max(...rocValues);
+      const peMax = Math.max(...peValues);
+      const rocRanking = 1 - currentStock[rocField] / rocMax;
+      const peRanking = 1 - currentStock[peField] / peMax;
+      const combinedRanking = rocRanking + peRanking;
+      return combinedRanking;
+    }
+    
+})
+
+
+
 
 
 module.exports=router;
