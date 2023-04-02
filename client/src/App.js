@@ -13,10 +13,10 @@ import Forgot from './pages/User/Forgot/Forgot'
 import Changepassword from './pages/User/Changepassword/Changepassword'
 import FeedbackA from './pages/Admin/Feedback/Feedback'
 import About from  './pages/User/AboutUs/About'
-import Feedback from  './pages/User/Feedback/Feedback'
+//import Feedback from  './pages/User/Feedback/Feedback'
 import Contact from  './pages/User/ContactUs/Contact'
 import PeerComparison from './pages/User/PeerComparison/PeerComparison'
-
+import RiskProfiler from './pages/User/RiskProfiler/RiskProfiler'
 
 
 
@@ -44,6 +44,7 @@ const App = () => {
                     <Route path='/forgot' element={<Forgot />} />
                     <Route path='/peercomparison' element={<PeerComparison />} />
                     <Route path='/changepassword' element={<Changepassword />} />
+                    <Route path='/riskprofiler' element={<RiskProfiler />} />
                     {/*<Route path='/Feedback' element={<Feedback />} />*/}
 
 

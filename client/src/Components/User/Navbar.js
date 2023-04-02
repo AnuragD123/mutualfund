@@ -217,6 +217,12 @@ function Navbar() {
                                 <Link className="nav-link" to="/stocks">Stocks</Link>
 
                             </li>
+                            
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/peercomparison">Peer Comparison</Link>
+
+                            </li>
+                            
                             <li className="nav-item">
                                 <Link className="nav-link" to="/aboutus">About Us</Link>
 

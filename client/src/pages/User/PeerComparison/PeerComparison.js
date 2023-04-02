@@ -68,7 +68,7 @@ function PeerComparison() {
                                     <tr>
                                         {/* <th>S.No</th> */}
                                         <th>Name</th>
-                                        <th>CMP_Rs</th>
+                                        {/*<th>CMP_Rs</th>
                                         <th>P_E_Ratio</th>
                                         <th>Mar_Cap_Rs_Cr</th>
                                         <th>Div_Yld_Percentage</th>
@@ -76,7 +76,7 @@ function PeerComparison() {
                                         <th>Qtr_Profit_Var_Percentage</th>
                                         <th>Sales_Qtr_Rs_Cr</th>
                                         <th>Qtr_Sales_Var_Percentage</th>
-                                        <th>ROCE_Percentage</th>
+                            <th>ROCE_Percentage</th>*/}
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -86,7 +86,17 @@ function PeerComparison() {
                                         return (
                                             <tr>
                                                 {/* <td>{}</td> */}
-                                                
+                                                <td>{sd.name}</td>
+                                                {/*<td>{sd.CMP_Rs}</td>
+                                                <td>{sd.P_E_Ratio}</td>
+                                                <td>{sd.Mar_Cap_Rs_Cr}</td>
+                                                <td>{sd.Div_Yld_Percentage}</td>
+                                                <td>{sd.NP_Qtr_Rs_Cr}</td>
+                                                <td>{sd.Qtr_Profit_Var_Percentage}</td>
+                                                <td>{sd.Sales_Qtr_Rs_Cr}</td>
+                                                <td>{sd.Qtr_Sales_Var_Percentage}</td>
+                                        <td>{sd.ROCE_Percentage}</td>*/}
+
                                             </tr>
                                         )
                                     })}
@@ -97,7 +107,7 @@ function PeerComparison() {
 
                                 </tbody>
                             </table>
-                            <p>Average P/E Ratio: {avgPE.toFixed(2)}</p>
+                            
                                 </div>
                            
                            
