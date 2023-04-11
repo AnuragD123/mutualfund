@@ -174,6 +174,7 @@ function RiskProfiler() {
       </button>
     </div>
   );
+  
 }
 
 export default RiskProfiler;
