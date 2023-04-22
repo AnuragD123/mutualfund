@@ -1,0 +1,131 @@
+.navbar {
+    background-color: #000;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-menu li {
+    margin: 0 20px;
+  }
+  
+  .nav-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  .nav-menu li a:hover {
+    color: #e50914;
+  }
+  
+  .nav-menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-menu.active {
+    display: flex;
+  }
+  
+  .nav-item button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .subscription-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .subscription-modal-content {
+    background-color: #fff;
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
+    position: relative;
+  }
+  
+  .subscription-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .subscription-modal-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .subscription-modal-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .subscription-modal-input {
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .subscription-modal-submit {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .subscription-modal-submit:hover {
+    background-color: #ff0f1a;
+  }
+  .nav-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .nav-item {
+    margin-left: auto;
+  }
+  .nav-menu {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .subscribe-button {
+    margin-left: auto;
+  }
+  
+  

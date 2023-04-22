@@ -1,9 +1,145 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import {FaStar} from "react-icons/fa";
+//import Subscription from '../../pages/User/Subscription/Subscription';
+//import Checkout from '../User/Subscribe button/checkout';
+//import useStripe from '../../pages/User/Subscription/stripe';
+//import './Subscribe button/checkout.css';
 
+
+
+
+//import './Membership.css'
 function Navbar() {
 
+  
+
+  /* Creating Membership */
+
+  /* const [showModal, setShowModal] = useState(false);
+
+
+  const handleOpeningModal = () => {
+    setShowModal(true);
+  };
+
+   const Checkout = () => {
+    const [email, setEmail] = useState('');
+    const [cardNumber, setCardNumber] = useState('');
+    const [expMonth, setExpMonth] = useState('');
+    const [expYear, setExpYear] = useState('');
+    const [cvc, setCvc] = useState('');
+    const [planId, setPlanId] = useState('');
+    
+  
+    const stripe = useStripe();
+  
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+  
+      const { error, paymentMethod } = await stripe.createPaymentMethod({
+        type: 'card',
+        card: {
+          number: cardNumber,
+          exp_month: expMonth,
+          exp_year: expYear,
+          cvc: cvc,
+        },
+        billing_details: {
+          email: email,
+        },
+      });
+  
+      if (error) {
+        console.log(error);
+      } else {
+        const { id } = paymentMethod;
+        const subscription = await stripe.subscriptions.create({
+          customer: 'customer_id', // replace with actual customer ID
+          items: [{ plan: planId }],
+          default_payment_method: id,
+        });
+  
+        console.log(subscription);
+      }
+      setShowModal(false);
+    };
+  
+    
+    
+  
+    const handleClosingModal = () => {
+      setShowModal(false);
+    };
+  
+    return (
+      <>
+      
+        {showModal && (
+          <div className="modal" onClick={handleClosingModal}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <span className="close" onClick={handleClosingModal}>
+                &times;
+              </span>
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Email"
+                />
+                <br />
+                <input
+                  type="text"
+                  value={cardNumber}
+                  onChange={(e) => setCardNumber(e.target.value)}
+                  placeholder="Card number"
+                />
+                <br />
+                <input
+                  type="text"
+                  value={expMonth}
+                  onChange={(e) => setExpMonth(e.target.value)}
+                  placeholder="MM"
+                />
+                <input
+                  type="text"
+                  value={expYear}
+                  onChange={(e) => setExpYear(e.target.value)}
+                  placeholder="YYYY"
+                />
+                <br />
+                <input
+                  type="text"
+                  value={cvc}
+                  onChange={(e) => setCvc(e.target.value)}
+                  placeholder="CVC"
+                />
+                <br />
+                <select
+                  value={planId}
+                  onChange={(e) => setPlanId(e.target.value)}
+                >
+                  <option value="">Select a plan</option>
+                  <option value="price_1Mx55zSHUiplHeHF4Eduq6Bh">
+                    Bronze Membership (499.00INR/month)
+                  </option>
+                  <option value="price_1Mx55zSHUiplHeHFcOGTnJ62">
+                    Silver Membership (1399.00INR/3 month)
+                  </option>
+                  <option value="price_1Mx55zSHUiplHeHFFt9OOhU2">
+                    Gold Membership (2599.00INR/6 months)
+              </option>
+            </select>
+            <br />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    )}
+  </>
+  );
+  };  */
 
 
 
@@ -189,6 +325,8 @@ function Navbar() {
     return (
         <div>
             <FeedbackModal/>
+             {/* <Checkout/>  */}
+            
 
             {/* Navbar */}
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -224,6 +362,11 @@ function Navbar() {
                             </li>
 
                             <li className="nav-item">
+                                <Link className="nav-link" to="/companyfinder">Finder</Link>
+                                
+                            </li>
+
+                            <li className="nav-item">
                                 <Link className="nav-link" to="/riskprofiler">Risk Profiler</Link>
                                 
                             </li>
@@ -240,6 +383,15 @@ function Navbar() {
                                 <Link className="nav-link" onClick={handleOpenModal} to="#">Feedback</Link>
                                 
                             </li>
+                            
+
+                            <>
+      
+    </>
+
+                            
+                            
+
                             {
 
                                 localStorage.getItem('token') ? ''
@@ -263,7 +415,7 @@ function Navbar() {
                     {/* Collapsible wrapper */}
                     {/* Right elements */}
                     <div className="d-flex align-items-center">
-
+                    
                         {/* Avatar */}
                         <div className="dropdown">
                             <Link className="dropdown-toggle d-flex align-items-center hidden-arrow" to="#" id="navbarDropdownMenuAvatar" role="button" data-mdb-toggle="dropdown" aria-expanded="false">

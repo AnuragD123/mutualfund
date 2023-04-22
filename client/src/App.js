@@ -17,6 +17,7 @@ import About from  './pages/User/AboutUs/About'
 import Contact from  './pages/User/ContactUs/Contact'
 import PeerComparison from './pages/User/PeerComparison/PeerComparison'
 import RiskProfiler from './pages/User/RiskProfiler/RiskProfiler'
+import CompanySearch from './pages/User/CompanySearch/CompanySearch'
 
 
 
@@ -45,6 +46,7 @@ const App = () => {
                     <Route path='/peercomparison' element={<PeerComparison />} />
                     <Route path='/changepassword' element={<Changepassword />} />
                     <Route path='/riskprofiler' element={<RiskProfiler />} />
+                    <Route path='/companyfinder' element={<CompanySearch />} />
                     {/*<Route path='/Feedback' element={<Feedback />} />*/}
 
 

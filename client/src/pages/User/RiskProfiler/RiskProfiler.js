@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import './RiskProfiler.css'; // Import the CSS file
+import './RiskProfiler.css';
+import Modal from 'react-modal'; // Import the CSS file
+
+Modal.setAppElement('#root');
 
 function RiskProfiler() {
   const [riskProfile, setRiskProfile] = useState({
