@@ -16,10 +16,10 @@
     {
     "name":"P I Industries",
     "url":"https://www.screener.in/company/PIIND/consolidated/",
-    "CMP_Rs":"3216.05",
-    "P_E_Ratio":"42.32",
-    "Mar_Cap_Rs_Cr":"48793.35",
-    "Div_Yld_Percentage":"0.18",
+    "CMP_Rs":"3216",
+    "P_E_Ratio":"42",
+    "Mar_Cap_Rs_Cr":"48793",
+    "Div_Yld_Percentage":"0",
     "NP_Qtr_Rs_Cr":"351.80",
     "Qtr_Profit_Var_Percentage":"58.04",
     "Sales_Qtr_Rs_Cr":"1613.20",
@@ -29,7 +29,7 @@
     {
     "name":"Sumitomo Chemi.",
     "url":"https://www.screener.in/company/SUMICHEM/",
-    "CMP_Rs":"461.00",
+    "CMP_Rs":"461",
     "P_E_Ratio":"45.53",
     "Mar_Cap_Rs_Cr":"23010.58",
     "Div_Yld_Percentage":"0.23",
@@ -42,7 +42,7 @@
     {
     "name":"Bayer Crop Sci.",
     "url":"https://www.screener.in/company/BAYERCROP/",
-    "CMP_Rs":"4400.00",
+    "CMP_Rs":"4400",
     "P_E_Ratio":"29.12",
     "Mar_Cap_Rs_Cr":"19774.51",
     "Div_Yld_Percentage":"2.23",
@@ -55,7 +55,7 @@
     {
     "name":"Sharda Cropchem",
     "url":"https://www.screener.in/company/SHARDACROP/consolidated/",
-    "CMP_Rs":"477.40",
+    "CMP_Rs":"477",
     "P_E_Ratio":"13.46",
     "Mar_Cap_Rs_Cr":"4307.16",
     "Div_Yld_Percentage":"1.27",
@@ -68,7 +68,7 @@
     {
     "name":"Rallis India",
     "url":"https://www.screener.in/company/RALLIS/",
-    "CMP_Rs":"201.45",
+    "CMP_Rs":"201",
     "P_E_Ratio":"26.74",
     "Mar_Cap_Rs_Cr":"3917.63",
     "Div_Yld_Percentage":"1.45",
