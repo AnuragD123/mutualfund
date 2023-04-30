@@ -7,6 +7,7 @@ function CompanySearch() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log("Form submitted");
     const { CMP_Rs, P_E_Ratio, Mar_Cap_Rs_Cr, Div_Yld_Percentage } = event.target.elements;
 
     if (data && data.companies && data.companies.length > 0) {
@@ -29,6 +30,7 @@ function CompanySearch() {
     }
   };
   //console.log(data);
+  
 
   return (
     <div className="company-search">
@@ -38,7 +40,7 @@ function CompanySearch() {
           <label htmlFor="CMP_Rs">CMP_Rs:</label>
           <input type="number" name="CMP_Rs" id="CMP_Rs" />
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
           <label htmlFor="P_E_Ratio">P_E_Ratio:</label>
           <input type="number" name="P_E_Ratio" id="P_E_Ratio" />
         </div>
@@ -49,11 +51,13 @@ function CompanySearch() {
         <div className="form-group">
           <label htmlFor="Div_Yld_Percentage">Div_Yld_Percentage:</label>
           <input type="number" name="Div_Yld_Percentage" id="Div_Yld_Percentage" />
-        </div>
+        </div> */}
         <button type="submit">Find Company</button>
       </form>
       <p>{companyName}</p>
+      
     </div>
+    
   );
 }
 

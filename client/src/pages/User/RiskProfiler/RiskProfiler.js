@@ -11,7 +11,7 @@ function RiskProfiler() {
     investmentExperience: '',
     riskTolerance: '',
   });
-  const [questionIndex, setQuestionIndex] = useState(0); // Track the index of the current question
+  const [questionIndex, setQuestionIndex] = useState(5); // Track the index of the current question
   const [questions, setQuestions] = useState([
     {
       question: 'What is your age range?',
@@ -31,7 +31,7 @@ function RiskProfiler() {
     },
   ]);
 
-  function handleInputChange(event) {
+   function handleInputChange(event) {
     const { name, value } = event.target;
     setRiskProfile((prevProfile) => ({
       ...prevProfile,
@@ -42,31 +42,37 @@ function RiskProfiler() {
   function handleOptionSelect(option) {
     setRiskProfile((prevProfile) => ({
       ...prevProfile,
-      [`question${questionIndex + 1}`]: option,
+      //[`question${questionIndex + 1}`]: option,
     }));
-    setQuestionIndex(questionIndex + 1);
-  }
+    setQuestionIndex(questionIndex + 5);
+  } 
 
   function calculateRiskProfile() {
     let score = 0;
-    let riskProfile = '';
     // Calculate score based on user's answers
     score += getScoreForOption(riskProfile.age);
     score += getScoreForOption(riskProfile.income);
     score += getScoreForOption(riskProfile.investmentExperience);
     score += getScoreForOption(riskProfile.riskTolerance);
-
+  
     // Determine risk profile based on total score
+    let calculatedRiskProfile = '';
     if (score >= 5 && score <= 8) {
-      riskProfile = 'Conservative Investor';
+      calculatedRiskProfile = 'Conservative Investor';
     } else if (score >= 9 && score <= 12) {
-      riskProfile = 'Moderate Investor';
-    } else if (score >= 13 && score <= 16) {
-      riskProfile = 'Aggressive Investor';
+      calculatedRiskProfile = 'Moderate Investor';
+    } else if (score >= 13 && score <= 20) {
+      calculatedRiskProfile = 'Aggressive Investor';
     }
-
-    console.log('Risk profile calculated:', riskProfile);
+  
+    setRiskProfile((prevProfile) => ({
+      ...prevProfile,
+      riskProfile: calculatedRiskProfile,
+    }));
+  
+    console.log('Risk profile calculated:', calculatedRiskProfile);
   }
+  
 
   function getScoreForOption(option) {
     switch (option) {
@@ -135,46 +141,80 @@ function RiskProfiler() {
         // Render the risk profile form
         <form>
           <label>
-            Age:
-            <input
-              type="text"
-              name="age"
-              value={riskProfile.age}
-              onChange={handleInputChange}
-            />
-          </label>
-          <label>
-            Income:
-            <input
-              type="text"
-              name="income"
-              value={riskProfile.income}
-              onChange={handleInputChange}
-            />
-          </label>
+  Age:
+  <select
+    name="age"
+    value={riskProfile.age}
+    onChange={handleInputChange}
+  >
+    <option value="">Select Age</option>
+    <option value="under 25">Under 25</option>
+    <option value="25-35">25-35</option>
+    <option value="35-45">35-45</option>
+    <option value="45-55">45-55</option>
+    <option value="Over 55">Over 55</option>
+  </select>
+</label>
+
+<label>
+  Income:
+  <select
+    name="income"
+    value={riskProfile.income}
+    onChange={handleInputChange}
+  >
+    <option value="">Select Income</option>
+    <option value="$0-$50,000">$0-$50,000</option>
+    <option value="$50,000-$100,000">$50,000-$100,000</option>
+    <option value="$100,000-$150,000">$100,000-$150,000</option>
+    <option value="$150,000-$200,000">$150,000-$200,000</option>
+    <option value="Over $200,000">Over $200,000</option>
+  </select>
+</label>
+
           <label>
             Investment Experience:
-            <input
-              type="text"
-              name="investmentExperience"
-              value={riskProfile.investmentExperience}
-              onChange={handleInputChange}
-            />
+            <select
+            name="investmentExperience"
+            value={riskProfile.investmentExperience}
+            onChange={handleInputChange}
+            >
+              <option value="">Select Investment Experience</option>
+              <option value="None">None</option>
+              <option value="1-2 years">1-2 years</option>
+              <option value="3-5 years">3-5 years</option>
+              <option value="6-10 years">6-10 years</option>
+              <option value="Over 10 years">Over 10 years</option>
+            </select>
           </label>
           <label>
             Risk Tolerance:
-            <input
-              type="text"
-              name="riskTolerance"
-              value={riskProfile.riskTolerance}
-              onChange={handleInputChange}
-            />
+            <select
+            name="riskTolerance"
+            value={riskProfile.riskTolerance}
+            onChange={handleInputChange}
+            >
+              <option value="">Select Risk Tolerance</option>
+              <option value="Very uncomfortable">Very uncomfortable</option>
+              <option value="Somewhat uncomfortable">Somewhat uncomfortable</option>
+              <option value="Neutral">Neutral</option>
+              <option value="Somewhat comfortable">Somewhat comfortable</option>
+              <option value="Very comfortable">Very comfortable</option>
+            </select>
           </label>
         </form>
       )}
       <button onClick={calculateRiskProfile}>
         {questionIndex < questions.length ? 'Next' : 'Calculate Risk Profile'}
       </button>
+      <div className="result">
+            {riskProfile.riskProfile && (
+              <>
+                <h2>Your risk profile:</h2>
+                <p>{riskProfile.riskProfile}</p>
+              </>
+            )}
+          </div>
     </div>
   );
   

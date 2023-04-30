@@ -11,8 +11,8 @@ function Home() {
       <Slider/>
       <FAQ/>
       <Feedback/>
-      {/* <Subscription/>  */}
-      <Checkout/>
+      {/* <Subscription/> */}  
+      <Checkout/> 
       
     </div>
   )
