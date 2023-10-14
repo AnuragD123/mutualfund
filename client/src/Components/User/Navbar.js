@@ -351,17 +351,17 @@ function Navbar() {
                                 <Link className="nav-link" to="/">Home</Link>
 
                             </li>
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="/stocks">Stocks</Link>
 
-                            </li>
+                            </li> */}
                             
                             <li className="nav-item">
                                 <Link className="nav-link" to="/peercomparison">Peer Comparison</Link>
 
                             </li>
 
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="/companyfinder">Finder</Link>
                                 
                             </li>
@@ -378,7 +378,7 @@ function Navbar() {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/contactus">Contact Us</Link>
                                 
-                            </li>
+                            </li> */}
                             <li className="nav-item">
                                 <Link className="nav-link" onClick={handleOpenModal} to="#">Feedback</Link>
                                 

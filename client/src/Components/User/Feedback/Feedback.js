@@ -50,7 +50,7 @@ function Feedback() {
                       {/* <img alt='userimage' src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp"
                         className="rounded-circle shadow-1-strong" width="100" height="100" /> */}
                         <div className="icon border border-5 border-success rounded-circle text-success " style={{width:"120px",height:"120px",display:"flex", alignItems:"center", justifyContent:"center"}}>
-                          <i class="fa fa-user display-2 fa-2xl " aria-hidden="true"></i>
+                          <i className="fa fa-user display-2 fa-2xl " aria-hidden="true"></i>
 
                         </div>
                     </div>

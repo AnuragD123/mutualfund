@@ -17,30 +17,27 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
-
-    imgPath:
-      'stock.jpg',
+    label: 'Image 1',
+    imgPath: 'stock.jpg',
   },
   {
-
-    imgPath:
-      'rlogoin.jpg',
+    label: 'Image 2',
+    imgPath: 'rlogoin.jpg',
   },
   {
-
-    imgPath:
-      'stock3.jpg',
+    label: 'Image 3',
+    imgPath: 'stock3.jpg',
   },
   {
-
-    imgPath:
-      'rlogo.jpg',
+    label: 'Image 4',
+    imgPath: 'rlogo.jpg',
   },
   {
-    imgPath:
-      'stock2.jpg',
+    label: 'Image 5',
+    imgPath: 'stock2.jpg',
   },
 ];
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
